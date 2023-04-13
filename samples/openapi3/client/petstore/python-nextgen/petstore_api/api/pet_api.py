@@ -163,7 +163,7 @@ class PetApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['petstore_auth', 'http_signature_test']  # noqa: E501
+        _auth_settings = ['petstore_auth']  # noqa: E501
 
         _response_types_map = {}
 
@@ -444,7 +444,7 @@ class PetApi(object):
             ['application/xml', 'application/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['petstore_auth', 'http_signature_test']  # noqa: E501
+        _auth_settings = ['petstore_auth']  # noqa: E501
 
         _response_types_map = {
             '200': "List[Pet]",
@@ -586,7 +586,7 @@ class PetApi(object):
             ['application/xml', 'application/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['petstore_auth', 'http_signature_test']  # noqa: E501
+        _auth_settings = ['petstore_auth']  # noqa: E501
 
         _response_types_map = {
             '200': "List[Pet]",
@@ -872,7 +872,7 @@ class PetApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['petstore_auth', 'http_signature_test']  # noqa: E501
+        _auth_settings = ['petstore_auth']  # noqa: E501
 
         _response_types_map = {}
 
