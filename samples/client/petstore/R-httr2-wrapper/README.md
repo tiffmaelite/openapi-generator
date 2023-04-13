@@ -133,7 +133,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-
+Authentication schemes defined for the API:
 ### http_auth
 
 - **Type**: HTTP basic authentication

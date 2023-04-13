@@ -72,6 +72,7 @@ null (empty response body)
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -145,6 +146,7 @@ null (empty response body)
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -217,6 +219,7 @@ public class Example {
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -288,6 +291,7 @@ public class Example {
 [**Set&lt;Pet&gt;**](Pet.md)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 
@@ -363,6 +367,7 @@ public class Example {
 
 ### Authorization
 
+
 [api_key](../README.md#api_key)
 
 ### HTTP request headers
@@ -434,6 +439,7 @@ public class Example {
 null (empty response body)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 
@@ -512,6 +518,7 @@ null (empty response body)
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -588,6 +595,7 @@ public class Example {
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -662,6 +670,7 @@ public class Example {
 [**ModelApiResponse**](ModelApiResponse.md)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 

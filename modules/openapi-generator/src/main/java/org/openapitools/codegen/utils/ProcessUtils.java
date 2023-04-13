@@ -221,6 +221,24 @@ public class ProcessUtils {
         return oauthMethods;
     }
 
+    /**
+     * Returns a list of Codegen security objects not supported by the current generator
+     *
+     * @param authMethods List of auth methods.
+     * @return A list of unsupported Codegen security objects
+     */
+    public static List<CodegenSecurity> getUnsupportedMethods(List<CodegenSecurity> authMethods) {
+        List<CodegenSecurity> unsupportedMethods = new ArrayList<>();
+
+        for (CodegenSecurity cs : authMethods) {
+            if (Boolean.TRUE.equals(cs.isUnsupported)){
+                unsupportedMethods.add(cs);
+            }
+        }
+
+        return unsupportedMethods;
+    }
+
 
     /**
      * Returns true if the specified OAS model has at least one operation with OAuth authentication.

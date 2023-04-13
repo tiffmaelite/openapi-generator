@@ -160,7 +160,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-
+Authentication schemes defined for the API:
 ## petstore_auth
 
 - **Type**: OAuth
@@ -191,7 +191,6 @@ Class | Method | HTTP request | Description
 - **Type**: HTTP Bearer Token authentication (JWT)
 
 !! Http Bearer Authentication not supported right now !!
-
 
 ## Author
 

@@ -38,6 +38,7 @@ This can only be done by the logged in user.
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -72,6 +73,7 @@ Creates list of users with given input array
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -108,6 +110,7 @@ Creates list of users with given input array
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -142,6 +145,7 @@ This can only be done by the logged in user.
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -178,6 +182,7 @@ Get user by user name
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -217,6 +222,7 @@ Logs user into the system
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -249,6 +255,7 @@ This endpoint does not need any parameter.
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -285,6 +292,7 @@ This can only be done by the logged in user.
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

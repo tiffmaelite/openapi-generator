@@ -72,16 +72,15 @@ No model defined in this package
 <a name="documentation-for-authorization"></a>{{! TODO: optional documentation for authorization? }}
 ## Documentation for Authorization
 
-{{^authMethods}}
-All endpoints do not require authorization.
-{{/authMethods}}
-{{#authMethods}}
-{{#last}}
+{{^authMethods}}No authorization required{{#hasUnsupportedAuthMethods}}
+Following authorization methods are declared in the API documentation, but they are not supported by the generated client code:
+{{#unsupportedAuthMethods}}- {{name}} (type={{type}}, scheme={{scheme}})
+{{/unsupportedAuthMethods}}{{/hasUnsupportedAuthMethods}}{{/authMethods}}
+{{#hasAuthMethods}}
 Authentication schemes defined for the API:
-{{/last}}
-{{/authMethods}}
+{{/hasAuthMethods}}
 {{#authMethods}}
-<a name="{{name}}"></a>
+<a id="{{name}}"></a>
 ### {{name}}
 
 {{#isApiKey}}- **Type**: API key

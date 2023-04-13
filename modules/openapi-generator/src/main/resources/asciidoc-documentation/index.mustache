@@ -38,6 +38,7 @@
 {{/isBasic}}
 {{#isOAuth}}* *OAuth*  AuthorizationUrl: _{{authorizationUrl}}_, TokenUrl:   _{{tokenUrl}}_ {{/isOAuth}}
 {{#isApiKey}}* *APIKey* KeyParamName:     _{{keyParamName}}_,     KeyInQuery: _{{isKeyInQuery}}_, KeyInHeader: _{{isKeyInHeader}}_{{/isApiKey}}
+{{#isUnsupported}}!! Not supported right now by generated client; errors might be occur !!{{/isUnsupported}}
 {{/authMethods}}
 
 {{/hasAuthMethods}}

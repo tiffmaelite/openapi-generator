@@ -48,7 +48,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val pet: Pet =  // Pet | Pet object that needs to be added to the store
@@ -128,7 +128,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val petId: Long = 789 // Long | Pet id to delete
@@ -210,7 +210,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val status: Seq[String] =  // Seq[String] | Status values that need to be considered for filter
@@ -291,7 +291,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val tags: Seq[String] =  // Seq[String] | Tags to filter by
@@ -457,7 +457,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val pet: Pet =  // Pet | Pet object that needs to be added to the store
@@ -539,7 +539,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val petId: Long = 789 // Long | ID of pet that needs to be updated
@@ -626,7 +626,7 @@ object Example extends App {
     
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
+
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")
     val petId: Long = 789 // Long | ID of pet to update

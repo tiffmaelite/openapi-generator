@@ -62,6 +62,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json

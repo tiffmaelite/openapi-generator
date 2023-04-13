@@ -37,6 +37,7 @@ Add a new pet to the store
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -74,6 +75,7 @@ Deletes a pet
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -109,6 +111,7 @@ Multiple status values can be provided with comma separated strings
 [**List&lt;Pet&gt;**](Pet.md)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 
@@ -146,6 +149,7 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -181,6 +185,7 @@ Returns a single pet
 [**Pet**](Pet.md)
 
 ### Authorization
+
 
 [api_key](../README.md#api_key)
 
@@ -218,6 +223,7 @@ Update an existing pet
 [**void**](Void.md)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 
@@ -259,6 +265,7 @@ Updates a pet in the store with form data
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -297,6 +304,7 @@ uploads an image
 
 ### Authorization
 
+
 [petstore_auth](../README.md#petstore_auth)
 
 ### HTTP request headers
@@ -333,6 +341,7 @@ uploads an image (required)
 [**ModelApiResponse**](ModelApiResponse.md)
 
 ### Authorization
+
 
 [petstore_auth](../README.md#petstore_auth)
 

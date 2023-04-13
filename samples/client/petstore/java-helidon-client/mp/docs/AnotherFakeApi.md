@@ -31,6 +31,7 @@ To test special tags and operation ID starting with number
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json

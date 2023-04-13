@@ -26,6 +26,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined

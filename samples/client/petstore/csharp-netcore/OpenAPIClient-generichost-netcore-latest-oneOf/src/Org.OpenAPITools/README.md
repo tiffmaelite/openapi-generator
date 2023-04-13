@@ -111,7 +111,8 @@ namespace YourProject
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
+No authorization required
+
 
 ## Build
 - SDK version: 1.0.0

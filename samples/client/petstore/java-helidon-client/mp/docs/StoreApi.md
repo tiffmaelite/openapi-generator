@@ -34,6 +34,7 @@ For valid response try integer IDs with value &lt; 1000. Anything above 1000 or 
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -64,6 +65,7 @@ This endpoint does not need any parameter.
 **Map&lt;String, Integer&gt;**
 
 ### Authorization
+
 
 [api_key](../README.md#api_key)
 
@@ -102,6 +104,7 @@ For valid response try integer IDs with value &lt;&#x3D; 5 or &gt; 10. Other val
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -138,6 +141,7 @@ Place an order for a pet
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

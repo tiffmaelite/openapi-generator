@@ -27,7 +27,7 @@ public class CodegenSecurity {
     public String name;
     public String type;
     public String scheme;
-    public Boolean isBasic, isOAuth, isApiKey;
+    public Boolean isBasic, isOAuth, isApiKey, isUnsupported;
     // is Basic is true for all http authentication type.
     // Those are to differentiate basic and bearer authentication
     // isHttpSignature is to support HTTP signature authorization scheme.
@@ -54,6 +54,7 @@ public class CodegenSecurity {
         filteredSecurity.isHttpSignature = isHttpSignature;
         filteredSecurity.isBasicBearer = isBasicBearer;
         filteredSecurity.isApiKey = isApiKey;
+        filteredSecurity.isUnsupported = isUnsupported;
         filteredSecurity.isOAuth = isOAuth;
         filteredSecurity.keyParamName = keyParamName;
         filteredSecurity.isCode = isCode;
@@ -98,6 +99,7 @@ public class CodegenSecurity {
                 Objects.equals(isBasic, that.isBasic) &&
                 Objects.equals(isOAuth, that.isOAuth) &&
                 Objects.equals(isApiKey, that.isApiKey) &&
+                Objects.equals(isUnsupported, that.isUnsupported) &&
                 Objects.equals(isBasicBasic, that.isBasicBasic) &&
                 Objects.equals(isHttpSignature, that.isHttpSignature) &&
                 Objects.equals(isBasicBearer, that.isBasicBearer) &&
@@ -121,7 +123,7 @@ public class CodegenSecurity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(name, type, scheme, isBasic, isOAuth, isApiKey,
+        return Objects.hash(name, type, scheme, isBasic, isOAuth, isApiKey, isUnsupported,
                 isBasicBasic, isHttpSignature, isBasicBearer, bearerFormat, vendorExtensions,
                 keyParamName, isKeyInQuery, isKeyInHeader, isKeyInCookie, flow,
                 authorizationUrl, tokenUrl, refreshUrl, scopes, isCode, isPassword, isApplication, isImplicit);
@@ -136,6 +138,7 @@ public class CodegenSecurity {
         sb.append(", isBasic=").append(isBasic);
         sb.append(", isOAuth=").append(isOAuth);
         sb.append(", isApiKey=").append(isApiKey);
+        sb.append(", isUnsupported=").append(isUnsupported);
         sb.append(", isBasicBasic=").append(isBasicBasic);
         sb.append(", isHttpSignature=").append(isHttpSignature);
         sb.append(", isBasicBearer=").append(isBasicBearer);

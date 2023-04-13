@@ -59,7 +59,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-
+Authentication schemes defined for the API:
 ## petstore_auth
 
 - **Type**: OAuth

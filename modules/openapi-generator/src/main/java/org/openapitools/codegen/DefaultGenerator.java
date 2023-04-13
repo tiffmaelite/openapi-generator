@@ -861,6 +861,9 @@ public class DefaultGenerator implements Generator {
         if (authMethods != null && !authMethods.isEmpty()) {
             bundle.put("authMethods", authMethods);
             bundle.put("hasAuthMethods", true);
+            List<CodegenSecurity> unsupportedMethods = ProcessUtils.getUnsupportedMethods(authMethods);
+            bundle.put("unsupportedAuthMethods", unsupportedMethods);
+            bundle.put("hasUnsupportedAuthMethods", !unsupportedMethods.isEmpty());
 
             if (ProcessUtils.hasOAuthMethods(authMethods)) {
                 bundle.put("hasOAuthMethods", true);
@@ -1180,14 +1183,14 @@ public class DefaultGenerator implements Generator {
                 if (authMethods != null && !authMethods.isEmpty()) {
                     List<CodegenSecurity> fullAuthMethods = config.fromSecurity(authMethods);
                     codegenOperation.authMethods = filterAuthMethods(fullAuthMethods, securities);
-                    codegenOperation.hasAuthMethods = true;
+                    codegenOperation.hasAuthMethods = codegenOperation.authMethods != null && !codegenOperation.authMethods.isEmpty();;
                 } else {
                     authMethods = getAuthMethods(globalSecurities, securitySchemes);
 
                     if (authMethods != null && !authMethods.isEmpty()) {
                         List<CodegenSecurity> fullAuthMethods = config.fromSecurity(authMethods);
                         codegenOperation.authMethods = filterAuthMethods(fullAuthMethods, globalSecurities);
-                        codegenOperation.hasAuthMethods = true;
+                        codegenOperation.hasAuthMethods = codegenOperation.authMethods != null && !codegenOperation.authMethods.isEmpty();;
                     }
                 }
 
@@ -1349,7 +1352,9 @@ public class DefaultGenerator implements Generator {
                 final String key = entry.getKey();
                 SecurityScheme securityScheme = securitySchemes.get(key);
                 if (securityScheme != null) {
-
+                    if (!config.supportsSecurityScheme(securityScheme)) {
+                        LOGGER.warn("API declaration contains an auth method unsupported by this generator: {}", securityScheme);
+                    }
                     if (securityScheme.getType().equals(SecurityScheme.Type.OAUTH2)) {
                         OAuthFlows oauthUpdatedFlows = new OAuthFlows();
                         oauthUpdatedFlows.extensions(securityScheme.getFlows().getExtensions());

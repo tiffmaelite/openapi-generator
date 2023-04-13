@@ -64,6 +64,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -131,6 +132,7 @@ This endpoint does not need any parameter.
 **Map&lt;String, Integer&gt;**
 
 ### Authorization
+
 
 [api_key](../README.md#api_key)
 
@@ -200,6 +202,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -267,6 +270,7 @@ public class Example {
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

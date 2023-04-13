@@ -53,7 +53,7 @@ Class | Method
 
 
 ## Authorization
-
+Authentication schemes defined for the API:
 ## petstore_auth
 - **Type**: OAuth
 - **Flow**: implicit

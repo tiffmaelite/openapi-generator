@@ -183,7 +183,7 @@ Method | HTTP request | Description
 
 
 ## Documentation For Authorization
-
+Authentication schemes defined for the API:
 ## authScheme
 - **Type**: OAuth
 - **Flow**: accessCode
@@ -199,6 +199,7 @@ Example
 Or via OAuth2 module to automatically refresh tokens and perform user authentication.
 ```
 ```
+
 
 ## Author
 

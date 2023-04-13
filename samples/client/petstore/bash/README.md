@@ -200,6 +200,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
+Authentication schemes defined for the API:
 ## petstore_auth
 
 
@@ -225,6 +226,7 @@ Class | Method | HTTP request | Description
 - **Location**: URL query string
 
 ## http_basic_test
+
 
 - **Type**: HTTP basic authentication
 

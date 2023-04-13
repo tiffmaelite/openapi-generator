@@ -39,6 +39,7 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 import io.swagger.v3.oas.models.security.OAuthFlow;
 import io.swagger.v3.oas.models.security.OAuthFlows;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.security.SecurityScheme.Type;
 import io.swagger.v3.oas.models.servers.Server;
 import io.swagger.v3.oas.models.servers.ServerVariable;
 import io.swagger.v3.parser.util.SchemaTypeUtil;
@@ -220,6 +221,7 @@ public class DefaultCodegen implements CodegenConfig {
     protected String removeOperationIdPrefixDelimiter = "_";
     protected int removeOperationIdPrefixCount = 1;
     protected boolean skipOperationExample;
+    protected boolean skipUnsupportedAuthMethods = false;//TODO: make this a cli option?
 
     protected final static Pattern JSON_MIME_PATTERN = Pattern.compile("(?i)application\\/json(;.*)?");
     protected final static Pattern JSON_VENDOR_MIME_PATTERN = Pattern.compile("(?i)application\\/vnd.(.*)+json(;.*)?");
@@ -5290,84 +5292,108 @@ public class DefaultCodegen implements CodegenConfig {
         List<CodegenSecurity> codegenSecurities = new ArrayList<>(securitySchemeMap.size());
         for (String key : securitySchemeMap.keySet()) {
             final SecurityScheme securityScheme = securitySchemeMap.get(key);
-            if (SecurityScheme.Type.APIKEY.equals(securityScheme.getType())) {
-                final CodegenSecurity cs = defaultCodegenSecurity(key, securityScheme);
-                cs.isBasic = cs.isOAuth = false;
-                cs.isApiKey = true;
-                cs.keyParamName = securityScheme.getName();
-                cs.isKeyInHeader = securityScheme.getIn() == SecurityScheme.In.HEADER;
-                cs.isKeyInQuery = securityScheme.getIn() == SecurityScheme.In.QUERY;
-                cs.isKeyInCookie = securityScheme.getIn() == SecurityScheme.In.COOKIE;  //it assumes a validation step prior to generation. (cookie-auth supported from OpenAPI 3.0.0)
-                codegenSecurities.add(cs);
-            } else if (SecurityScheme.Type.HTTP.equals(securityScheme.getType())) {
-                final CodegenSecurity cs = defaultCodegenSecurity(key, securityScheme);
-                cs.isKeyInHeader = cs.isKeyInQuery = cs.isKeyInCookie = cs.isApiKey = cs.isOAuth = false;
-                cs.isBasic = true;
-                if ("basic".equalsIgnoreCase(securityScheme.getScheme())) {
-                    cs.isBasicBasic = true;
-                } else if ("bearer".equalsIgnoreCase(securityScheme.getScheme())) {
-                    cs.isBasicBearer = true;
-                    cs.bearerFormat = securityScheme.getBearerFormat();
-                } else if ("signature".equalsIgnoreCase(securityScheme.getScheme())) {
-                    // HTTP signature as defined in https://datatracker.ietf.org/doc/draft-cavage-http-signatures/
-                    // The registry of security schemes is maintained by IANA.
-                    // https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml
-                    // As of January 2020, the "signature" scheme has not been registered with IANA yet.
-                    // This scheme may have to be changed when it is officially registered with IANA.
-                    cs.isHttpSignature = true;
-                    once(LOGGER).warn("Security scheme 'HTTP signature' is a draft IETF RFC and subject to change.");
-                } else {
-                    once(LOGGER).warn("Unknown scheme `{}` found in the HTTP security definition.", securityScheme.getScheme());
-                }
-                codegenSecurities.add(cs);
-            } else if (SecurityScheme.Type.OAUTH2.equals(securityScheme.getType())) {
-                final OAuthFlows flows = securityScheme.getFlows();
-                boolean isFlowEmpty = true;
-                if (securityScheme.getFlows() == null) {
-                    throw new RuntimeException("missing oauth flow in " + key);
-                }
-                if (flows.getPassword() != null) {
-                    final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
-                    setOauth2Info(cs, flows.getPassword());
-                    cs.isPassword = true;
-                    cs.flow = "password";
-                    codegenSecurities.add(cs);
-                    isFlowEmpty = false;
-                }
-                if (flows.getImplicit() != null) {
-                    final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
-                    setOauth2Info(cs, flows.getImplicit());
-                    cs.isImplicit = true;
-                    cs.flow = "implicit";
-                    codegenSecurities.add(cs);
-                    isFlowEmpty = false;
-                }
-                if (flows.getClientCredentials() != null) {
-                    final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
-                    setOauth2Info(cs, flows.getClientCredentials());
-                    cs.isApplication = true;
-                    cs.flow = "application";
-                    codegenSecurities.add(cs);
-                    isFlowEmpty = false;
-                }
-                if (flows.getAuthorizationCode() != null) {
-                    final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
-                    setOauth2Info(cs, flows.getAuthorizationCode());
-                    cs.isCode = true;
-                    cs.flow = "accessCode";
-                    codegenSecurities.add(cs);
-                    isFlowEmpty = false;
-                }
-
-                if (isFlowEmpty) {
-                    once(LOGGER).error("Invalid flow definition defined in the security scheme: {}", flows);
-                }
+            boolean unsupported = !supportsSecurityScheme(securityScheme);
+            if (unsupported && skipUnsupportedAuthMethods) {
+                once(LOGGER).warn("Unsupported type `{}` and scheme `{}` found in the security definition `{}`. Skipping it during code generation.", securityScheme.getType(), securityScheme.getScheme(), key);
             } else {
-                once(LOGGER).error("Unknown type `{}` found in the security definition `{}`.", securityScheme.getType(), securityScheme.getName());
+                if (SecurityScheme.Type.APIKEY.equals(securityScheme.getType())) {
+                    final CodegenSecurity cs = defaultCodegenSecurity(key, securityScheme);
+                    cs.isUnsupported = unsupported;
+                    cs.isBasic = cs.isOAuth = false;
+                    cs.isApiKey = true;
+                    cs.keyParamName = securityScheme.getName();
+                    cs.isKeyInHeader = securityScheme.getIn() == SecurityScheme.In.HEADER;
+                    cs.isKeyInQuery = securityScheme.getIn() == SecurityScheme.In.QUERY;
+                    cs.isKeyInCookie = securityScheme.getIn()
+                            == SecurityScheme.In.COOKIE;  //it assumes a validation step prior to generation. (cookie-auth supported from OpenAPI 3.0.0)
+                    codegenSecurities.add(cs);
+                } else if (SecurityScheme.Type.HTTP.equals(securityScheme.getType())) {
+                    final CodegenSecurity cs = defaultCodegenSecurity(key, securityScheme);
+                    cs.isUnsupported = unsupported;
+                    cs.isKeyInHeader = cs.isKeyInQuery = cs.isKeyInCookie = cs.isApiKey = cs.isOAuth = false;
+                    cs.isBasic = true;
+                    if ("basic".equalsIgnoreCase(securityScheme.getScheme())) {
+                        cs.isBasicBasic = true;
+                    } else if ("bearer".equalsIgnoreCase(securityScheme.getScheme())) {
+                        cs.isBasicBearer = true;
+                        cs.bearerFormat = securityScheme.getBearerFormat();
+                    } else if ("signature".equalsIgnoreCase(securityScheme.getScheme())) {
+                        // HTTP signature as defined in https://datatracker.ietf.org/doc/draft-cavage-http-signatures/
+                        // The registry of security schemes is maintained by IANA.
+                        // https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml
+                        // As of January 2020, the "signature" scheme has not been registered with IANA yet.
+                        // This scheme may have to be changed when it is officially registered with IANA.
+                        cs.isHttpSignature = true;
+                        once(LOGGER).warn("Security scheme 'HTTP signature' is a draft IETF RFC and subject to change.");
+                    } else {
+                        once(LOGGER).warn("Unknown scheme `{}` found in the HTTP security definition.", securityScheme.getScheme());
+                    }
+                    codegenSecurities.add(cs);
+                } else if (SecurityScheme.Type.OAUTH2.equals(securityScheme.getType())) {
+                    final OAuthFlows flows = securityScheme.getFlows();
+                    boolean isFlowEmpty = true;
+                    if (securityScheme.getFlows() == null) {
+                        throw new RuntimeException("missing oauth flow in " + key);
+                    }
+                    if (flows.getPassword() != null) {
+                        final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
+                        cs.isUnsupported = unsupported;
+                        setOauth2Info(cs, flows.getPassword());
+                        cs.isPassword = true;
+                        cs.flow = "password";
+                        codegenSecurities.add(cs);
+                        isFlowEmpty = false;
+                    }
+                    if (flows.getImplicit() != null) {
+                        final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
+                        cs.isUnsupported = unsupported;
+                        setOauth2Info(cs, flows.getImplicit());
+                        cs.isImplicit = true;
+                        cs.flow = "implicit";
+                        codegenSecurities.add(cs);
+                        isFlowEmpty = false;
+                    }
+                    if (flows.getClientCredentials() != null) {
+                        final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
+                        cs.isUnsupported = unsupported;
+                        setOauth2Info(cs, flows.getClientCredentials());
+                        cs.isApplication = true;
+                        cs.flow = "application";
+                        codegenSecurities.add(cs);
+                        isFlowEmpty = false;
+                    }
+                    if (flows.getAuthorizationCode() != null) {
+                        final CodegenSecurity cs = defaultOauthCodegenSecurity(key, securityScheme);
+                        cs.isUnsupported = unsupported;
+                        setOauth2Info(cs, flows.getAuthorizationCode());
+                        cs.isCode = true;
+                        cs.flow = "accessCode";
+                        codegenSecurities.add(cs);
+                        isFlowEmpty = false;
+                    }
+
+                    if (isFlowEmpty) {
+                        once(LOGGER).error("Invalid flow definition defined in the security scheme: {}", flows);
+                    }
+                } else {
+                    once(LOGGER).error("Unknown type `{}` found in the security definition `{}`.", securityScheme.getType(), securityScheme.getName());
+                }
             }
         }
 
         return codegenSecurities;
+    }
+
+    @Override
+    public boolean supportsSecurityScheme(SecurityScheme securityScheme) {
+        return Type.APIKEY.equals(securityScheme.getType())
+                || (Type.HTTP.equals(securityScheme.getType())
+                && ("basic".equalsIgnoreCase(securityScheme.getScheme())
+                || "bearer".equalsIgnoreCase(securityScheme.getScheme())
+                || "signature".equalsIgnoreCase(securityScheme.getScheme())))
+                || Type.OAUTH2.equals(securityScheme.getType())
+                /*|| Type.OPENIDCONNECT.equals(securityScheme.getType())
+                || Type.MUTUALTLS.equals(securityScheme.getType())*/;
     }
 
     private CodegenSecurity defaultCodegenSecurity(String key, SecurityScheme securityScheme) {
@@ -5388,6 +5414,7 @@ public class DefaultCodegen implements CodegenConfig {
         final CodegenSecurity cs = defaultCodegenSecurity(key, securityScheme);
         cs.isKeyInHeader = cs.isKeyInQuery = cs.isKeyInCookie = cs.isApiKey = cs.isBasic = false;
         cs.isOAuth = true;
+        cs.isUnsupported = false;
         return cs;
     }
 
@@ -5948,6 +5975,16 @@ public class DefaultCodegen implements CodegenConfig {
     @Override
     public boolean isSkipOperationExample() {
         return skipOperationExample;
+    }
+
+    @Override
+    public boolean isSkipUnsupportedAuthMethods() {
+        return skipUnsupportedAuthMethods;
+    }
+
+    @Override
+    public void setSkipUnsupportedAuthMethods(boolean skipUnsupportedAuthMethods) {
+        this.skipUnsupportedAuthMethods = skipUnsupportedAuthMethods;
     }
 
     @Override

@@ -160,10 +160,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-{{^authMethods}}All endpoints do not require authorization.
-{{/authMethods}}Authentication schemes defined for the API:
+{{^authMethods}}No authorization required{{#hasUnsupportedAuthMethods}}
+Following authorization methods are declared in the API documentation, but they are not supported by the generated client code:
+{{#unsupportedAuthMethods}}- {{name}} (type={{type}}, scheme={{scheme}})
+{{/unsupportedAuthMethods}}{{/hasUnsupportedAuthMethods}}
+{{/authMethods}}{{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
 {{#authMethods}}### {{name}}
-
+{{#isUnsupported}}!! Not supported right now by generated client; errors might be occur !!{{/isUnsupported}}
 {{#isApiKey}}
 
 - **Type**: API key

@@ -60,8 +60,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-{{^authMethods}}No authorization required{{/authMethods}}
-{{#authMethods}}
+{{^authMethods}}No authorization required{{#hasUnsupportedAuthMethods}}
+Following authorization methods are declared in the API documentation, but they are not supported by the generated client code:
+{{#unsupportedAuthMethods}}- {{name}} (type={{type}}, scheme={{scheme}})
+{{/unsupportedAuthMethods}}{{/hasUnsupportedAuthMethods}}{{/authMethods}}{{#authMethods}}
 {{#isBasic}}
 {{#isBasicBasic}}
 Configure {{name}}:

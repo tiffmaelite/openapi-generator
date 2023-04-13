@@ -71,6 +71,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -136,6 +137,7 @@ public class Example {
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -203,6 +205,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -268,6 +271,7 @@ public class Example {
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -335,6 +339,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -401,6 +406,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -465,6 +471,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -531,6 +538,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -595,6 +603,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -661,6 +670,7 @@ public class Example {
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -757,6 +767,7 @@ null (empty response body)
 
 ### Authorization
 
+
 [http_basic_test](../README.md#http_basic_test)
 
 ### HTTP request headers
@@ -841,6 +852,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/x-www-form-urlencoded
@@ -920,6 +932,7 @@ null (empty response body)
 
 ### Authorization
 
+
 [bearer_test](../README.md#bearer_test)
 
 ### HTTP request headers
@@ -987,6 +1000,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1053,6 +1067,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -1130,6 +1145,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

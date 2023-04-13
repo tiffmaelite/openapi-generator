@@ -75,7 +75,6 @@ object PetApiExample extends App {
 
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
-    
     // Create invoker to execute requests
     val apiInvoker = ApiInvoker()
     val apiInstance = PetApi("http://petstore.swagger.io/v2")

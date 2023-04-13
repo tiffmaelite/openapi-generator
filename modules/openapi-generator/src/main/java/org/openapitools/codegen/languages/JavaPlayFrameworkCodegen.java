@@ -424,6 +424,7 @@ public class JavaPlayFrameworkCodegen extends AbstractJavaCodegen implements Bea
             this.isBasic = cm.isBasic;
             this.isOAuth = cm.isOAuth;
             this.isApiKey = cm.isApiKey;
+            this.isUnsupported = cm.isUnsupported;
             this.isBasicBasic = cm.isBasicBasic;
             this.isBasicBearer = cm.isBasicBearer;
             this.isHttpSignature = cm.isHttpSignature;

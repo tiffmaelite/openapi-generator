@@ -41,6 +41,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -75,6 +76,7 @@ Test serialization of outer boolean types
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -111,6 +113,7 @@ Test serialization of object with outer number type
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -145,6 +148,7 @@ Test serialization of outer number types
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -181,6 +185,7 @@ Test serialization of outer string types
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -215,6 +220,7 @@ Test serialization of enum (int) properties with examples
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -251,6 +257,7 @@ For this test, the body has to be a binary file.
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: image/png
@@ -286,6 +293,7 @@ For this test, the body for this request must reference a schema named &#x60;Fil
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -319,6 +327,7 @@ No authorization required
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -354,6 +363,7 @@ To test \&quot;client\&quot; model
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -401,6 +411,7 @@ Fake endpoint for testing various parameters 假端點 偽のエンドポイン�
 
 ### Authorization
 
+
 [http_basic_test](../README.md#http_basic_test)
 
 ### HTTP request headers
@@ -447,6 +458,7 @@ To test enum parameters
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/x-www-form-urlencoded
@@ -486,6 +498,7 @@ Fake endpoint to test group parameters (optional)
 
 ### Authorization
 
+
 [bearer_test](../README.md#bearer_test)
 
 ### HTTP request headers
@@ -523,6 +536,7 @@ test inline additionalProperties
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -558,6 +572,7 @@ test json serialization of form data
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -599,6 +614,7 @@ To test the collection format in query parameters
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

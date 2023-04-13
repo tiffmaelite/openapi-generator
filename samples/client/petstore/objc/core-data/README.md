@@ -122,7 +122,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-
+Authentication schemes defined for the API:
 ## api_key
 
 - **Type**: API key

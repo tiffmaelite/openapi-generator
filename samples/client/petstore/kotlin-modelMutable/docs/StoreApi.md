@@ -50,7 +50,6 @@ null (empty response body)
 ### Authorization
 
 No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -143,7 +142,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -188,7 +186,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined

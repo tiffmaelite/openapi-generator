@@ -118,10 +118,14 @@ Method | HTTP request | Description
 {{/model}}{{/models}}
 
 ## Documentation For Authorization
-{{^authMethods}} Endpoints do not require authorization.
-{{/authMethods}}{{#authMethods}}{{#last}} Authentication schemes defined for the API:{{/last}}{{/authMethods}}
+{{^authMethods}}No authorization required{{#hasUnsupportedAuthMethods}}
+Following authorization methods are declared in the API documentation, but they are not supported by the generated client code:
+{{#unsupportedAuthMethods}}- {{name}} (type={{type}}, scheme={{scheme}})
+{{/unsupportedAuthMethods}}{{/hasUnsupportedAuthMethods}}
+{{/authMethods}}{{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
 {{#authMethods}}
-## {{{name}}}
+<a id="{{name}}"></a>
+### {{{name}}}
 {{#isApiKey}}- **Type**: API key
 
 Example
@@ -164,6 +168,7 @@ Or via OAuth2 module to automatically refresh tokens and perform user authentica
 	{{! TODO: OAuth example }}
 ```
 {{/isOAuth}}
+{{#isUnsupported}}!! Not supported right now by generated client; errors might be occur !!{{/isUnsupported}}
 {{/authMethods}}
 
 ## Author

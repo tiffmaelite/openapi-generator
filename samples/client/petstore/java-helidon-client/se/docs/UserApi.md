@@ -68,6 +68,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -132,6 +133,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -198,6 +200,7 @@ null (empty response body)
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -262,6 +265,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -329,6 +333,7 @@ public class Example {
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -400,6 +405,7 @@ public class Example {
 
 No authorization required
 
+
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -461,6 +467,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 
@@ -528,6 +535,7 @@ null (empty response body)
 ### Authorization
 
 No authorization required
+
 
 ### HTTP request headers
 

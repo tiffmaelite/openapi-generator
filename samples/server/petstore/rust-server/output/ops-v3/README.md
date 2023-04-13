@@ -175,7 +175,7 @@ Method | HTTP request | Description
 
 
 ## Documentation For Authorization
- Endpoints do not require authorization.
+No authorization required
 
 
 ## Author

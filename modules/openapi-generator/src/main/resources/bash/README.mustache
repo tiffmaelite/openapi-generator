@@ -113,26 +113,33 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-{{^authMethods}} All endpoints do not require authorization.
-{{/authMethods}}{{#authMethods}}{{#last}} Authentication schemes defined for the API:{{/last}}{{/authMethods}}
-{{#authMethods}}## {{{name}}}
+{{^authMethods}}No authorization required{{#hasUnsupportedAuthMethods}}
+Following authorization methods are declared in the API documentation, but they are not supported by the generated client code:
+{{#unsupportedAuthMethods}}- {{name}} (type={{type}}, scheme={{scheme}})
+{{/unsupportedAuthMethods}}{{/hasUnsupportedAuthMethods}}{{/authMethods}}
+{{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
+{{#authMethods}}
+<a id="{{name}}"></a>
+### {{{name}}}
+{{#isUnsupported}}!! Not supported right now by generated client; errors might be occur !!{{/isUnsupported}}
 
 {{#isApiKey}}
-
 - **Type**: API key
 - **API key parameter name**: {{{keyParamName}}}
 - **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
 {{/isApiKey}}
-{{#isBasicBasic}}- **Type**: HTTP basic authentication
+{{#isBasicBasic}}
+- **Type**: HTTP basic authentication
 {{/isBasicBasic}}
-{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
-    !! Http Bearer Authentication not supported right now !!
+{{#isBasicBearer}}
+- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+!! Http Bearer Authentication not supported right now !!
 {{/isBasicBearer}}
-{{#isHttpSignature}}- **Type**: HTTP signature authentication
-    !! Http Signature Authentication not supported right now !!
+{{#isHttpSignature}}
+- **Type**: HTTP signature authentication
+!! Http Signature Authentication not supported right now !!
 {{/isHttpSignature}}
 {{#isOAuth}}
-
 - **Type**: OAuth
 - **Flow**: {{{flow}}}{{#authorizationUrl}}
 - **Authorization URL**: {{{.}}}{{/authorizationUrl}}{{#tokenUrl}}

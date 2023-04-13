@@ -67,6 +67,7 @@ public class Example {
 
 ### Authorization
 
+
 [api_key_query](../README.md#api_key_query)
 
 ### HTTP request headers

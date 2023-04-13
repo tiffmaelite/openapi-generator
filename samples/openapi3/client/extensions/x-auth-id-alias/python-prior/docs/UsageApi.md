@@ -74,6 +74,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
+
 [api_key](../README.md#api_key), [api_key_query](../README.md#api_key_query)
 
 ### HTTP request headers
@@ -154,6 +155,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
+
 [api_key](../README.md#api_key), [api_key_query](../README.md#api_key_query)
 
 ### HTTP request headers
@@ -227,6 +229,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
+
 [api_key](../README.md#api_key)
 
 ### HTTP request headers
@@ -299,6 +302,7 @@ This endpoint does not need any parameter.
 **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}**
 
 ### Authorization
+
 
 [api_key_query](../README.md#api_key_query)
 
