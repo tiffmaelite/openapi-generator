@@ -136,13 +136,17 @@ Example
 	{{! TODO: Add HTTP basic authentication }}
 ```
 {{/isBasicBasic}}
-{{#isBasicBearer}}- **Type**: Bearer token authentication
+{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
 
 Example
 ```
 	{{! TODO: Add Bearer token authentication }}
 ```
 {{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication
+
+    !! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{#isOAuth}}- **Type**: OAuth
 - **Flow**: {{{flow}}}
 - **Authorization URL**: {{{authorizationUrl}}}

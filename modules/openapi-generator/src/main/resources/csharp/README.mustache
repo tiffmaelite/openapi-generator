@@ -217,8 +217,11 @@ Authentication schemes defined for the API:
 {{/isBasicBasic}}
 {{#isBasicBearer}}
 
-- **Type**: HTTP bearer authentication
+- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
 {{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication
+!! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{/isBasic}}
 {{#isOAuth}}
 

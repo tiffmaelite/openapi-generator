@@ -190,11 +190,13 @@ Authentication schemes defined for the API:
 ### bearer_test
 
 
-- **Type**: Bearer Authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 
 <a name="http_signature_test"></a>
 ### http_signature_test
 
+
+- **Type**: HTTP signature authentication
 
 
 ## Build

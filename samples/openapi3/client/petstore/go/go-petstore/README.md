@@ -258,14 +258,14 @@ r, err := client.Service.Operation(auth, args)
 
 ### bearer_test
 
-- **Type**: HTTP Bearer token authentication
+    - **Type**: HTTP Bearer Token authentication (JWT)
 
-Example
+    Example
 
-```golang
-auth := context.WithValue(context.Background(), sw.ContextAccessToken, "BEARER_TOKEN_STRING")
-r, err := client.Service.Operation(auth, args)
-```
+    ```golang
+    auth := context.WithValue(context.Background(), sw.ContextAccessToken, "BEARER_TOKEN_STRING")
+    r, err := client.Service.Operation(auth, args)
+    ```
 
 
 ### http_signature_test

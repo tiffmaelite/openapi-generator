@@ -125,8 +125,13 @@ Class | Method | HTTP request | Description
 - **Type**: HTTP Basic authentication
 {{/isBasicBasic}}
 {{#isBasicBearer}}
-- **Type**: HTTP Bearer authentication
+- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
 {{/isBasicBearer}}
+{{#isHttpSignature}}
+- **Type**: HTTP signature authentication
+
+    !! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{/isBasic}}
 {{#isOAuth}}- **Type**: OAuth
 - **Flow**: {{{flow}}}

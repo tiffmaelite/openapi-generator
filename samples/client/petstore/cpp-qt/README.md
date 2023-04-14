@@ -55,7 +55,7 @@ PFXPet Example::create(){
 void Example::exampleFunction1(){
      PFXPetApi apiInstance;
      
-      //OAuth Authentication supported right now
+      //!! OAuth not supported right now !!
 
       QEventLoop loop;
       connect(&apiInstance, &PFXPetApi::addPetSignal, [&]() {
@@ -137,6 +137,8 @@ Authentication schemes defined for the API:
 - **Scopes**: 
   - write:pets: modify pets in your account
   - read:pets: read your pets
+
+    !! OAuth not supported right now !!
 
 ### api_key
 

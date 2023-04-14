@@ -140,8 +140,11 @@ Class | Method | HTTP request | Description
 {{/isApiKey}}
 {{#isBasic}}
 {{#isBasicBasic}}- **Type**: HTTP basic authentication
-{{/isBasicBasic}}{{#isBasicBearer}}- **Type**: Bearer authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
-{{/isBasicBearer}}
+{{/isBasicBasic}}{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+{{/isBasicBearer}}{{#isHttpSignature}}- **Type**: HTTP signature authentication
+
+!! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{/isBasic}}
 {{#isOAuth}}
 

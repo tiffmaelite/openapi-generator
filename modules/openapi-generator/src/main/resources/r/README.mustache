@@ -100,18 +100,18 @@ Class | Method | HTTP request | Description
 - **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
 {{/isApiKey}}
 {{#isBasic}}
-{{#isHttpSignature}}
-- **Type**: HTTP signature authentication
-{{/isHttpSignature}}
 {{#isBasicBasic}}
 - **Type**: HTTP basic authentication
 {{/isBasicBasic}}
 {{#isBasicBearer}}
-- **Type**: Bearer authentication
+- **Type**: HTTP Bearer Token authentication
 {{#bearerFormat}}
 - **Bearer Format**: {{{.}}}
 {{/bearerFormat}}
 {{/isBasicBearer}}
+{{#isHttpSignature}}
+    - **Type**: HTTP signature authentication
+{{/isHttpSignature}}
 {{/isBasic}}
 {{#isOAuth}}
 - **Type**: OAuth

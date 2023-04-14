@@ -587,9 +587,6 @@ Fake endpoint to test group parameters (optional)
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearer_test
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearer_test').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearer_test').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFakeApi();
 final int requiredStringGroup = 56; // int | Required String in group parameters

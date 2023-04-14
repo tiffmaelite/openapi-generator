@@ -113,17 +113,6 @@ Note, each API key must be added to a map of `map[string]APIKey` where the key i
 
 {{/isApiKey}}
 {{#isBasic}}
-{{#isBasicBearer}}
-- **Type**: HTTP Bearer token authentication
-
-Example
-
-```golang
-auth := context.WithValue(context.Background(), sw.ContextAccessToken, "BEARER_TOKEN_STRING")
-r, err := client.Service.Operation(auth, args)
-```
-
-{{/isBasicBearer}}
 {{#isBasicBasic}}
 - **Type**: HTTP basic authentication
 
@@ -138,6 +127,17 @@ r, err := client.Service.Operation(auth, args)
 ```
 
 {{/isBasicBasic}}
+{{#isBasicBearer}}
+    - **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+
+    Example
+
+    ```golang
+    auth := context.WithValue(context.Background(), sw.ContextAccessToken, "BEARER_TOKEN_STRING")
+    r, err := client.Service.Operation(auth, args)
+    ```
+
+{{/isBasicBearer}}
 {{#isHttpSignature}}
 - **Type**: HTTP signature authentication
 

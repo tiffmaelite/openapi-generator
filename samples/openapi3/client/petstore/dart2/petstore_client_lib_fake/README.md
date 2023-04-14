@@ -182,7 +182,7 @@ Class | Method | HTTP request | Description
 
 ## bearer_test
 
-- **Type**: HTTP Bearer authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 
 
 ## Author

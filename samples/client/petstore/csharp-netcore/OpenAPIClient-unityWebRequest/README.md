@@ -256,9 +256,10 @@ Class | Method | HTTP request | Description
 <a name="bearer_test"></a>
 ### bearer_test
 
-- **Type**: Bearer Authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 
 <a name="http_signature_test"></a>
 ### http_signature_test
 
+- **Type**: HTTP signature authentication
 

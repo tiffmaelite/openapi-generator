@@ -506,5 +506,5 @@ Class | Method | HTTP request | Description
 
 ## bearer_test
 
-- **Type**: HTTP basic authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 

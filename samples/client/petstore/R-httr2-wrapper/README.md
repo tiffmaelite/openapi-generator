@@ -140,7 +140,7 @@ Class | Method | HTTP request | Description
 
 ### BearerToken
 
-- **Type**: Bearer authentication
+- **Type**: HTTP Bearer Token authentication
 
 ### petstore_auth
 

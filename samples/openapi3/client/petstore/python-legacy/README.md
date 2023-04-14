@@ -210,11 +210,12 @@ Class | Method | HTTP request | Description
 
 ## bearer_test
 
-- **Type**: Bearer authentication (JWT)
+- **Type**: HTTP Bearer Token authentication (JWT)
 
 
 ## http_signature_test
 
+- **Type**: HTTP signature authentication
 
 
 ## Author

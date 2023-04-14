@@ -97,10 +97,14 @@ Authentication schemes defined for the API:
 - **API key parameter name**: {{keyParamName}}
 - **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
 {{/isApiKey}}
-{{#isBasic}}
+{{#isBasicBasic}}
 
 - **Type**: HTTP basic authentication
-{{/isBasic}}
+{{/isBasicBasic}}
+{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+{{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication
+{{/isHttpSignature}}
 {{#isOAuth}}
 
 - **Type**: OAuth

@@ -268,7 +268,7 @@ Authentication schemes defined for the API:
 
 ### bearer_test
 
-- **Type**: HTTP basic authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 
 
 ## Recommendation

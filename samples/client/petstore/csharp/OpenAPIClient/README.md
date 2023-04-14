@@ -238,5 +238,5 @@ Class | Method | HTTP request | Description
 ### bearer_test
 
 
-- **Type**: HTTP bearer authentication
+- **Type**: HTTP Bearer Token authentication (JWT)
 

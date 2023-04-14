@@ -65,7 +65,7 @@ This runs all tests and packages the library.
     <a name="petstore_auth"></a>
     ### petstore_auth
 
-            - **Type**: OAuth
+                    - **Type**: OAuth
     - **Flow**: implicit
     - **Authorization URL**: http://petstore.swagger.io/api/oauth/dialog
     - **Scopes**: 
@@ -78,4 +78,4 @@ This runs all tests and packages the library.
     - **Type**: API key
     - **API key parameter name**: api_key
     - **Location**: HTTP header
-        
+                
