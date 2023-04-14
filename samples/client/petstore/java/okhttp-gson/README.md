@@ -270,10 +270,6 @@ Authentication schemes defined for the API:
 
 - **Type**: HTTP basic authentication
 
-### http_signature_test
-
-- **Type**: HTTP basic authentication
-
 
 ## Recommendation
 

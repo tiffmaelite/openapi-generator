@@ -31,8 +31,23 @@ paths:
                     $ref: '#/components/schemas/Foo'
   /pet:
     servers:
-    - url: 'http://petstore.swagger.io/v2'
-    - url: 'http://path-server-test.petstore.local/v2'
+      - url: 'http://petstore.swagger.io/v2'
+      - url: 'http://path-server-test.petstore.local/v2'
+      - url: 'http://{server}.swagger.io:{port}/v2'
+        description: test server with variables
+        variables:
+          server:
+            description: target server
+            enum:
+              - 'petstore'
+              - 'qa-petstore'
+              - 'dev-petstore'
+            default: 'petstore'
+          port:
+            enum:
+              - 80
+              - 8080
+            default: 80
     post:
       tags:
         - pet
@@ -303,6 +318,7 @@ paths:
       summary: Returns pet inventories by status
       description: Returns a map of status codes to quantities
       operationId: getInventory
+      x-webclient-blocking: false
       responses:
         '200':
           description: successful operation
@@ -1169,6 +1185,32 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HealthCheckResult'
+  /fake/http-signature-test:
+    get:
+      tags:
+        - fake
+      summary: test http signature authentication
+      operationId: fake-http-signature-test
+      parameters:
+        - name: query_1
+          in: query
+          description: query parameter
+          required: optional
+          schema:
+            type: string
+        - name: header_1
+          in: header
+          description: header parameter
+          required: optional
+          schema:
+            type: string
+      security:
+        - http_signature_test: []
+      requestBody:
+        $ref: '#/components/requestBodies/Pet'
+      responses:
+        200:
+          description: The instance started successfully
 servers:
   - url: 'http://{server}.swagger.io:{port}/v2'
     description: petstore server
@@ -1246,6 +1288,9 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
+    http_signature_test:
+      type: http
+      scheme: signature
   schemas:
     Foo:
       type: object
@@ -1439,6 +1484,9 @@ components:
       type: object
       discriminator:
         propertyName: className
+        mapping:
+          DOG: '#/components/schemas/Dog'
+          CAT: '#/components/schemas/Cat'
       required:
         - className
       properties:
@@ -1724,23 +1772,23 @@ components:
     OuterEnumInteger:
       type: integer
       enum:
-      - 0
-      - 1
-      - 2
+        - 0
+        - 1
+        - 2
       example: 2
     OuterEnumDefaultValue:
       type: string
       enum:
-      - placed
-      - approved
-      - delivered
+        - placed
+        - approved
+        - delivered
       default: placed
     OuterEnumIntegerDefaultValue:
       type: integer
       enum:
-      - 0
-      - 1
-      - 2
+        - 0
+        - 1
+        - 2
       default: 0
     OuterComposite:
       type: object
@@ -1879,77 +1927,17 @@ components:
           deprecated: true
           items:
             $ref: '#/components/schemas/Bar'
-    Pig:
-      nullable: true
-      oneOf:
-        - $ref: '#/components/schemas/BasquePig'
-        - $ref: '#/components/schemas/DanishPig'
-    BasquePig:
+    AllOfWithSingleRef:
       type: object
       properties:
-        className:
+        username:
           type: string
-        color:
-          type: string
-      required:
-        - className
-        - color
-    DanishPig:
-      type: object
-      properties:
-        className:
-          type: string
-        size:
-          type: integer
-      required:
-        - className
-        - size
-    NestedOneOf:
-      type: object
-      properties:
-        size:
-          type: integer
-        nested_pig:
-          $ref: '#/components/schemas/Pig'
-    NestedColor:
-      type: object
-      properties:
-        size:
-          type: integer
-        nested:
-          $ref: '#/components/schemas/Color'
-    RgbColor:
-      description: RGB three element array with values 0-255.
-      type: array
-      items:
-        type: integer
-        minimum: 0
-        maximum: 255
-      minItems: 3
-      maxItems: 3
-    RgbaColor:
-      description: RGBA four element array with values 0-255.
-      type: array
-      items:
-        type: integer
-        minimum: 0
-        maximum: 255
-      minItems: 4
-      maxItems: 4
-    HexColor:
-      description: 'Hex color string, such as #00FF00.'
+        SingleRefType:
+          allOf:
+            - $ref: '#/components/schemas/SingleRefType'
+    SingleRefType:
       type: string
-      pattern: ^#(?:[0-9a-fA-F]{3}){1,2}$
-      minLength: 7
-      maxLength: 7
-    Color:
-      description: RGB array, RGBA array, or hex string.
-      oneOf:
-      - $ref: '#/components/schemas/RgbColor'
-      - $ref: '#/components/schemas/RgbaColor'
-      - $ref: '#/components/schemas/HexColor'
-    StringOrBoolean:
-      description: String or boolean
-      oneOf:
-      - type: string
-      - type: boolean
+      title: SingleRefType
+      enum:
+        - admin
+        - user
