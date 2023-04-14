@@ -105,7 +105,7 @@ public class ApiClient {
         auth = new HttpBearerAuth("{{scheme}}");
       {{/isBasicBearer}}
       {{^isBasicBearer}}
-        throw new RuntimeException("auth name \"" + authName + "\" is not a supported basic auth type");
+        throw new RuntimeException("auth name \"" + authName + "\" does not have a supported http scheme type");
       {{/isBasicBearer}}
       {{/isBasicBasic}}
       {{/isBasic}}
