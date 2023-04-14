@@ -105,6 +105,14 @@ Class | Method | HTTP request | Description
 {{/isApiKey}}
 {{#isBasicBasic}}- **Type**: HTTP basic authentication
 {{/isBasicBasic}}
+{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+
+!! Http Bearer Authentication not supported right now !!
+{{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication
+
+!! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{#isOAuth}}- **Type**: OAuth
 - **Flow**: {{{flow}}}
 - **Authorization URL**: {{{authorizationUrl}}}

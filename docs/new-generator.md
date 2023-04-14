@@ -229,21 +229,37 @@ Authentication schemes defined for the API:
 {{#isApiKey}}- **Type**: API key
 - **API key parameter name**: {{keyParamName}}
 - **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
+
+!! API key not supported right now!!
 {{/isApiKey}}
-{{#isBasic}}- **Type**: HTTP basic authentication
-{{/isBasic}}
+{{#isBasicBasic}}- **Type**: HTTP basic authentication
+
+!! Http Basic Authentication not supported right now !!
+{{/isBasicBasic}}
+{{#isBasicBearer}}- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
+
+!! Http Bearer Authentication not supported right now !!
+{{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication
+
+!! Http Signature Authentication not supported right now !!
+{{/isHttpSignature}}
 {{#isOAuth}}- **Type**: OAuth
 - **Flow**: {{flow}}
 - **Authorization URL**: {{authorizationUrl}}
 - **Scopes**: {{^scopes}}N/A{{/scopes}}
 {{#scopes}}  - {{scope}}: {{description}}
 {{/scopes}}
+
+!! OAuth not supported right now !!
 {{/isOAuth}}
 
 {{/authMethods}}
 ```
 
-Let's not focus too much on the contents of this file.  You may refer to [templating](./templating.md) for more details on the variables bound to these files and to [debugging](./debugging.md) how to debug the structures. Of note here is that we're generating structures in markdown as defined by the objects constructed by our new "Config" class.
+For each authentication method supported by your generator, remove the warning lines about these authentication methods not being supported.
+
+Let's not focus longer on the contents of this file.  You may refer to [templating](./templating.md) for more details on the variables bound to these files and to [debugging](./debugging.md) how to debug the structures. Of note here is that we're generating structures in markdown as defined by the objects constructed by our new "Config" class.
 
 #### api.mustache
 

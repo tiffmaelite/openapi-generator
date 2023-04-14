@@ -167,6 +167,8 @@ Authentication schemes defined for the API:
 {{/isBasicBasic}}
 {{#isBasicBearer}}- **Type**: Bearer Authentication
 {{/isBasicBearer}}
+{{#isHttpSignature}}- **Type**: HTTP signature authentication (!! Http Signature Authentication not supported right now !!)
+{{/isHttpSignature}}
 {{#isOAuth}}- **Type**: OAuth
 - **Flow**: {{flow}}
 - **Authorization URL**: {{authorizationUrl}}

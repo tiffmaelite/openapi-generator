@@ -258,7 +258,7 @@ r, err := client.Service.Operation(auth, args)
 
 ### bearer_test
 
-- **Type**: HTTP Bearer token authentication
+- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
 
 Example
 

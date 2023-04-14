@@ -114,7 +114,7 @@ Note, each API key must be added to a map of `map[string]APIKey` where the key i
 {{/isApiKey}}
 {{#isBasic}}
 {{#isBasicBearer}}
-- **Type**: HTTP Bearer token authentication
+- **Type**: HTTP Bearer Token authentication{{#bearerFormat}} ({{{.}}}){{/bearerFormat}}
 
 Example
 
