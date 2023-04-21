@@ -191,13 +191,13 @@ Class | Method | HTTP request | Description
 No model defined in this package
 {{/modelPackage}}
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 {{^authMethods}}Endpoints do not require authorization.{{/authMethods}}
 {{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
 {{#authMethods}}
-<a name="{{name}}"></a>
+<a id="{{name}}"></a>
 ### {{name}}
 
 {{#isApiKey}}- **Type**: API key
