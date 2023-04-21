@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**fooGet**](DefaultApi.md#fooGet) | **GET** /foo | 
 
 
-<a name="fooGet"></a>
+<a id="fooGet"></a>
 # **fooGet**
 > InlineResponseDefault fooGet()
 

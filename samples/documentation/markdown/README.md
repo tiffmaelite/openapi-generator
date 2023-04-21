@@ -1,6 +1,6 @@
 # Documentation for OpenAPI Petstore
 
-<a name="documentation-for-api-endpoints"></a>
+<a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
 All URIs are relative to *http://petstore.swagger.io/v2*
@@ -29,7 +29,7 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 *UserApi* | [**updateUser**](Apis/UserApi.md#updateuser) | **PUT** /user/{username} | Updated user |
 
 
-<a name="documentation-for-models"></a>
+<a id="documentation-for-models"></a>
 ## Documentation for Models
 
  - [ApiResponse](./Models/ApiResponse.md)
@@ -40,17 +40,17 @@ All URIs are relative to *http://petstore.swagger.io/v2*
  - [User](./Models/User.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-<a name="api_key"></a>
+<a id="api_key"></a>
 ### api_key
 
 - **Type**: API key
 - **API key parameter name**: api_key
 - **Location**: HTTP header
 
-<a name="petstore_auth"></a>
+<a id="petstore_auth"></a>
 ### petstore_auth
 
 - **Type**: OAuth

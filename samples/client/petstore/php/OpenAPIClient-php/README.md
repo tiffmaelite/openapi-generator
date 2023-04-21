@@ -165,7 +165,7 @@ Class | Method | HTTP request | Description
 - [Tag](docs/Model/Tag.md)
 - [User](docs/Model/User.md)
 
-<a name="authorization"></a>
+<a id="authorization"></a>
 ## Authorization
 
 ### petstore_auth

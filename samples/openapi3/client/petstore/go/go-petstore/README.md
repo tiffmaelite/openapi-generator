@@ -189,12 +189,12 @@ Class | Method | HTTP request | Description
  - [Zebra](docs/Zebra.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 
 Authentication schemes defined for the API:
-<a name="petstore_auth"></a>
+<a id="petstore_auth"></a>
 ### petstore_auth
 
 
@@ -224,7 +224,7 @@ auth := context.WithValue(oauth2.NoContext, sw.ContextOAuth2, tokenSource)
 r, err := client.Service.Operation(auth, args)
 ```
 
-<a name="api_key"></a>
+<a id="api_key"></a>
 ### api_key
 
 - **Type**: API key
@@ -233,7 +233,7 @@ r, err := client.Service.Operation(auth, args)
 
 Note, each API key must be added to a map of `map[string]APIKey` where the key is: api_key and passed in as the auth context for each request.
 
-<a name="api_key_query"></a>
+<a id="api_key_query"></a>
 ### api_key_query
 
 - **Type**: API key
@@ -242,7 +242,7 @@ Note, each API key must be added to a map of `map[string]APIKey` where the key i
 
 Note, each API key must be added to a map of `map[string]APIKey` where the key is: api_key_query and passed in as the auth context for each request.
 
-<a name="http_basic_test"></a>
+<a id="http_basic_test"></a>
 ### http_basic_test
 
 - **Type**: HTTP basic authentication
@@ -257,7 +257,7 @@ auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAut
 r, err := client.Service.Operation(auth, args)
 ```
 
-<a name="bearer_test"></a>
+<a id="bearer_test"></a>
 ### bearer_test
 
 - **Type**: HTTP Bearer token authentication
@@ -269,7 +269,7 @@ auth := context.WithValue(context.Background(), sw.ContextAccessToken, "BEARER_T
 r, err := client.Service.Operation(auth, args)
 ```
 
-<a name="http_signature_test"></a>
+<a id="http_signature_test"></a>
 ### http_signature_test
 
 - **Type**: HTTP signature authentication

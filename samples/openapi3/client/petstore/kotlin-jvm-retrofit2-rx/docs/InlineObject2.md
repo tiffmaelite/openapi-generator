@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 **enumFormString** | [**inline**](#EnumFormStringEnum) | Form parameter enum test (string) |  [optional]
 
 
-<a name="kotlin.collections.List<EnumFormStringArrayEnum>"></a>
+<a id="kotlin.collections.List<EnumFormStringArrayEnum>"></a>
 ## Enum: enum_form_string_array
 Name | Value
 ---- | -----
 enumFormStringArray | &gt;, $
 
 
-<a name="EnumFormStringEnum"></a>
+<a id="EnumFormStringEnum"></a>
 ## Enum: enum_form_string
 Name | Value
 ---- | -----

@@ -120,19 +120,19 @@ Class | Method | HTTP request | Description
  - [SWGUser](docs/SWGUser.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 
 Authentication schemes defined for the API:
-<a name="api_key"></a>
+<a id="api_key"></a>
 ### api_key
 
 - **Type**: API key
 - **API key parameter name**: api_key
 - **Location**: HTTP header
 
-<a name="petstore_auth"></a>
+<a id="petstore_auth"></a>
 ### petstore_auth
 
 - **Type**: OAuth

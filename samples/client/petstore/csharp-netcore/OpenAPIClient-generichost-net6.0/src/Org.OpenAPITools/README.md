@@ -1,6 +1,6 @@
 # Created with Openapi Generator
 
-<a name="cli"></a>
+<a id="cli"></a>
 ## Run the following powershell command to generate the library
 
 ```ps1
@@ -41,7 +41,7 @@ java -jar "<path>/openapi-generator/modules/openapi-generator-cli/target/openapi
     # -t templates
 ```
 
-<a name="usage"></a>
+<a id="usage"></a>
 ## Using the library in your project
 
 ```cs
@@ -124,7 +124,7 @@ namespace YourProject
     }
 }
 ```
-<a name="questions"></a>
+<a id="questions"></a>
 ## Questions
 
 - What about HttpRequest failures and retries?
@@ -140,7 +140,7 @@ namespace YourProject
   Use the provided On and After methods in the Api class from the namespace Org.OpenAPITools.Rest.DefaultApi.
   Or provide your own class by using the generic ConfigureApi method.
 
-<a name="dependencies"></a>
+<a id="dependencies"></a>
 ## Dependencies
 
 - [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting/) - 5.0.0 or later
@@ -150,12 +150,12 @@ namespace YourProject
 - [CompareNETObjects](https://www.nuget.org/packages/CompareNETObjects) - 4.61.0 or later
 - [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 4.7.0 or later
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 
 Authentication schemes defined for the API:
-<a name="petstore_auth"></a>
+<a id="petstore_auth"></a>
 ### petstore_auth
 
 
@@ -164,25 +164,25 @@ Authentication schemes defined for the API:
 - **Authorization URL**: http://petstore.swagger.io/api/oauth/dialog
 - **Scopes**:   
 - write:pets: modify pets in your account  
-- read:pets: read your pets<a name="api_key"></a>
+- read:pets: read your pets<a id="api_key"></a>
 ### api_key
 
 - **Type**: API key
 - **API key parameter name**: api_key
-- **Location**: HTTP header<a name="api_key_query"></a>
+- **Location**: HTTP header<a id="api_key_query"></a>
 ### api_key_query
 
 - **Type**: API key
 - **API key parameter name**: api_key_query
-- **Location**: URL query string<a name="http_basic_test"></a>
+- **Location**: URL query string<a id="http_basic_test"></a>
 ### http_basic_test
 
 
-- **Type**: HTTP basic authentication<a name="bearer_test"></a>
+- **Type**: HTTP basic authentication<a id="bearer_test"></a>
 ### bearer_test
 
 
-- **Type**: Bearer Authentication<a name="http_signature_test"></a>
+- **Type**: Bearer Authentication<a id="http_signature_test"></a>
 ### http_signature_test
 
 

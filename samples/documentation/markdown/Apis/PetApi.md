@@ -14,7 +14,7 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 | [**uploadFile**](PetApi.md#uploadFile) | **POST** /pet/{petId}/uploadImage | uploads an image |
 
 
-<a name="addPet"></a>
+<a id="addPet"></a>
 # **addPet**
 > Pet addPet(Pet)
 
@@ -41,7 +41,7 @@ Add a new pet to the store
 - **Content-Type**: application/json, application/xml
 - **Accept**: application/xml, application/json
 
-<a name="deletePet"></a>
+<a id="deletePet"></a>
 # **deletePet**
 > deletePet(petId, api\_key)
 
@@ -69,7 +69,7 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-<a name="findPetsByStatus"></a>
+<a id="findPetsByStatus"></a>
 # **findPetsByStatus**
 > List findPetsByStatus(status)
 
@@ -96,7 +96,7 @@ Finds Pets by status
 - **Content-Type**: Not defined
 - **Accept**: application/xml, application/json
 
-<a name="findPetsByTags"></a>
+<a id="findPetsByTags"></a>
 # **findPetsByTags**
 > List findPetsByTags(tags)
 
@@ -123,7 +123,7 @@ Finds Pets by tags
 - **Content-Type**: Not defined
 - **Accept**: application/xml, application/json
 
-<a name="getPetById"></a>
+<a id="getPetById"></a>
 # **getPetById**
 > Pet getPetById(petId)
 
@@ -150,7 +150,7 @@ Find pet by ID
 - **Content-Type**: Not defined
 - **Accept**: application/xml, application/json
 
-<a name="updatePet"></a>
+<a id="updatePet"></a>
 # **updatePet**
 > Pet updatePet(Pet)
 
@@ -177,7 +177,7 @@ Update an existing pet
 - **Content-Type**: application/json, application/xml
 - **Accept**: application/xml, application/json
 
-<a name="updatePetWithForm"></a>
+<a id="updatePetWithForm"></a>
 # **updatePetWithForm**
 > updatePetWithForm(petId, name, status)
 
@@ -206,7 +206,7 @@ null (empty response body)
 - **Content-Type**: application/x-www-form-urlencoded
 - **Accept**: Not defined
 
-<a name="uploadFile"></a>
+<a id="uploadFile"></a>
 # **uploadFile**
 > ApiResponse uploadFile(petId, additionalMetadata, file)
 

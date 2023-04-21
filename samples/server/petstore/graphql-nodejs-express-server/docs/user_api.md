@@ -14,46 +14,46 @@ Method | HTTP request | Description
 [**UpdateUser**](user_api.md#UpdateUser) | **PUT** /user/{username} | Updated user
 
 
-<a name="CreateUser"></a>
+<a id="CreateUser"></a>
 # **CreateUser**
 > CreateUser(body)
 
 Create user
 
 This can only be done by the logged in user.
-<a name="CreateUsersWithArrayInput"></a>
+<a id="CreateUsersWithArrayInput"></a>
 # **CreateUsersWithArrayInput**
 > CreateUsersWithArrayInput(body)
 
 Creates list of users with given input array
-<a name="CreateUsersWithListInput"></a>
+<a id="CreateUsersWithListInput"></a>
 # **CreateUsersWithListInput**
 > CreateUsersWithListInput(body)
 
 Creates list of users with given input array
-<a name="DeleteUser"></a>
+<a id="DeleteUser"></a>
 # **DeleteUser**
 > DeleteUser(username)
 
 Delete user
 
 This can only be done by the logged in user.
-<a name="GetUserByName"></a>
+<a id="GetUserByName"></a>
 # **GetUserByName**
 > User GetUserByName(username)
 
 Get user by user name
-<a name="LoginUser"></a>
+<a id="LoginUser"></a>
 # **LoginUser**
 > String! LoginUser(username, password)
 
 Logs user into the system
-<a name="LogoutUser"></a>
+<a id="LogoutUser"></a>
 # **LogoutUser**
 > LogoutUser()
 
 Logs out current logged in user session
-<a name="UpdateUser"></a>
+<a id="UpdateUser"></a>
 # **UpdateUser**
 > UpdateUser(username, body)
 

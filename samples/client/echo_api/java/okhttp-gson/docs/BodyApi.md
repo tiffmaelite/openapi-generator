@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:3000*
 | [**testEchoBodyPetResponseString**](BodyApi.md#testEchoBodyPetResponseString) | **POST** /echo/body/Pet/response_string | Test empty response body |
 
 
-<a name="testBinaryGif"></a>
+<a id="testBinaryGif"></a>
 # **testBinaryGif**
 > File testBinaryGif()
 
@@ -67,7 +67,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Successful operation |  -  |
 
-<a name="testEchoBodyPet"></a>
+<a id="testEchoBodyPet"></a>
 # **testEchoBodyPet**
 > Pet testEchoBodyPet(pet)
 
@@ -129,7 +129,7 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Successful operation |  -  |
 
-<a name="testEchoBodyPetResponseString"></a>
+<a id="testEchoBodyPetResponseString"></a>
 # **testEchoBodyPetResponseString**
 > String testEchoBodyPetResponseString(pet)
 

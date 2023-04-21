@@ -182,11 +182,11 @@ Method | HTTP request | Description
  - [XmlObject](docs/XmlObject.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 Authentication schemes defined for the API:
-<a name="authScheme"></a>
+<a id="authScheme"></a>
 ### authScheme
 - **Type**: OAuth
 - **Flow**: accessCode

@@ -24,7 +24,7 @@
     </ol>
   {{/hasAuthMethods}}
 
-  <h2><a name="__Methods">Methods</a></h2>
+  <h2><a id="__Methods">Methods</a></h2>
   [ Jump to <a href="#__Models">Models</a> ]
 
   {{! for the tables of content, I cheat and don't use CSS styles.... }}
@@ -46,9 +46,9 @@
   {{#apiInfo}}
   {{#apis}}
   {{#operations}}
-  <h1><a name="{{baseName}}">{{baseName}}</a></h1>
+  <h1><a id="{{baseName}}">{{baseName}}</a></h1>
   {{#operation}}
-  <div class="method"><a name="{{nickname}}"/>
+  <div class="method"><a id="{{nickname}}"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
     <pre class="{{httpMethod}}"><code class="huge"><span class="http-method">{{httpMethod}}</span> {{path}}</code></pre></div>
@@ -148,7 +148,7 @@
   {{/apis}}
   {{/apiInfo}}
 
-  <h2><a name="__Models">Models</a></h2>
+  <h2><a id="__Models">Models</a></h2>
   [ Jump to <a href="#__Methods">Methods</a> ]
 
   <h3>Table of Contents</h3>
@@ -163,7 +163,7 @@
   {{#models}}
   {{#model}}
   <div class="model">
-    <h3><a name="{{name}}"><code>{{name}}</code>{{#title}} - {{.}}{{/title}}</a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a id="{{name}}"><code>{{name}}</code>{{#title}} - {{.}}{{/title}}</a> <a class="up" href="#__Models">Up</a></h3>
     {{#unescapedDescription}}<div class='model-description'>{{.}}</div>{{/unescapedDescription}}
     <div class="field-items">
       {{#vars}}<div class="param">{{name}} {{^required}}(optional){{/required}}</div><div class="param-desc"><span class="param-type">{{^isPrimitiveType}}<a href="#{{complexType}}">{{dataType}}</a>{{/isPrimitiveType}}</span> {{unescapedDescription}} {{#dataFormat}}format: {{{.}}}{{/dataFormat}}</div>

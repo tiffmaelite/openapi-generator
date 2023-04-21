@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**testQueryParameterCollectionFormat**](FakeApi.md#testQueryParameterCollectionFormat) | **PUT** /fake/test-query-parameters | 
 
 
-<a name="fakeHealthGet"></a>
+<a id="fakeHealthGet"></a>
 # **fakeHealthGet**
 > HealthCheckResult fakeHealthGet()
 
@@ -62,7 +62,7 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="fakeHttpSignatureTest"></a>
+<a id="fakeHttpSignatureTest"></a>
 # **fakeHttpSignatureTest**
 > fakeHttpSignatureTest(pet, query1, header1)
 
@@ -110,7 +110,7 @@ null (empty response body)
  - **Content-Type**: application/json, application/xml
  - **Accept**: Not defined
 
-<a name="fakeOuterBooleanSerialize"></a>
+<a id="fakeOuterBooleanSerialize"></a>
 # **fakeOuterBooleanSerialize**
 > kotlin.Boolean fakeOuterBooleanSerialize(body)
 
@@ -157,7 +157,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="fakeOuterCompositeSerialize"></a>
+<a id="fakeOuterCompositeSerialize"></a>
 # **fakeOuterCompositeSerialize**
 > OuterComposite fakeOuterCompositeSerialize(outerComposite)
 
@@ -204,7 +204,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="fakeOuterNumberSerialize"></a>
+<a id="fakeOuterNumberSerialize"></a>
 # **fakeOuterNumberSerialize**
 > java.math.BigDecimal fakeOuterNumberSerialize(body)
 
@@ -251,7 +251,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="fakeOuterStringSerialize"></a>
+<a id="fakeOuterStringSerialize"></a>
 # **fakeOuterStringSerialize**
 > kotlin.String fakeOuterStringSerialize(body)
 
@@ -298,7 +298,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="testBodyWithFileSchema"></a>
+<a id="testBodyWithFileSchema"></a>
 # **testBodyWithFileSchema**
 > testBodyWithFileSchema(fileSchemaTestClass)
 
@@ -344,7 +344,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="testBodyWithQueryParams"></a>
+<a id="testBodyWithQueryParams"></a>
 # **testBodyWithQueryParams**
 > testBodyWithQueryParams(query, user)
 
@@ -390,7 +390,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="testClientModel"></a>
+<a id="testClientModel"></a>
 # **testClientModel**
 > Client testClientModel(client)
 
@@ -437,7 +437,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="testEndpointParameters"></a>
+<a id="testEndpointParameters"></a>
 # **testEndpointParameters**
 > testEndpointParameters(number, double, patternWithoutDelimiter, byte, integer, int32, int64, float, string, binary, date, dateTime, password, paramCallback)
 
@@ -512,7 +512,7 @@ Configure http_basic_test:
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="testEnumParameters"></a>
+<a id="testEnumParameters"></a>
 # **testEnumParameters**
 > testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString)
 
@@ -572,7 +572,7 @@ No authorization required
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="testGroupParameters"></a>
+<a id="testGroupParameters"></a>
 # **testGroupParameters**
 > testGroupParameters(requiredStringGroup, requiredBooleanGroup, requiredInt64Group, stringGroup, booleanGroup, int64Group)
 
@@ -630,7 +630,7 @@ Configure bearer_test:
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="testInlineAdditionalProperties"></a>
+<a id="testInlineAdditionalProperties"></a>
 # **testInlineAdditionalProperties**
 > testInlineAdditionalProperties(requestBody)
 
@@ -674,7 +674,7 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="testJsonFormData"></a>
+<a id="testJsonFormData"></a>
 # **testJsonFormData**
 > testJsonFormData(param, param2)
 
@@ -720,7 +720,7 @@ No authorization required
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="testQueryParameterCollectionFormat"></a>
+<a id="testQueryParameterCollectionFormat"></a>
 # **testQueryParameterCollectionFormat**
 > testQueryParameterCollectionFormat(pipe, ioutil, http, url, context)
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **indirectMap** | **kotlin.collections.Map&lt;kotlin.String, kotlin.Boolean&gt;** |  |  [optional]
 
 
-<a name="kotlin.collections.Map<kotlin.String, InnerEnum>"></a>
+<a id="kotlin.collections.Map<kotlin.String, InnerEnum>"></a>
 ## Enum: map_of_enum_string
 Name | Value
 ---- | -----

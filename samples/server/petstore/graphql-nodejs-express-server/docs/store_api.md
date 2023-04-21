@@ -10,28 +10,28 @@ Method | HTTP request | Description
 [**PlaceOrder**](store_api.md#PlaceOrder) | **POST** /store/order | Place an order for a pet
 
 
-<a name="DeleteOrder"></a>
+<a id="DeleteOrder"></a>
 # **DeleteOrder**
 > DeleteOrder(orderId)
 
 Delete purchase order by ID
 
 For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
-<a name="GetInventory"></a>
+<a id="GetInventory"></a>
 # **GetInventory**
 > Int! GetInventory()
 
 Returns pet inventories by status
 
 Returns a map of status codes to quantities
-<a name="GetOrderById"></a>
+<a id="GetOrderById"></a>
 # **GetOrderById**
 > Order GetOrderById(orderId)
 
 Find purchase order by ID
 
 For valid response try integer IDs with value &lt;&#x3D; 5 or &gt; 10. Other values will generate exceptions
-<a name="PlaceOrder"></a>
+<a id="PlaceOrder"></a>
 # **PlaceOrder**
 > Order PlaceOrder(body)
 

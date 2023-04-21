@@ -200,11 +200,11 @@ Method | HTTP request | Description
  - [User](docs/User.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 Authentication schemes defined for the API:
-<a name="petstore_auth"></a>
+<a id="petstore_auth"></a>
 ### petstore_auth
 - **Type**: OAuth
 - **Flow**: implicit
@@ -220,21 +220,21 @@ Example
 Or via OAuth2 module to automatically refresh tokens and perform user authentication.
 ```
 ```
-<a name="api_key"></a>
+<a id="api_key"></a>
 ### api_key
 - **Type**: API key
 
 Example
 ```
 ```
-<a name="api_key_query"></a>
+<a id="api_key_query"></a>
 ### api_key_query
 - **Type**: API key
 
 Example
 ```
 ```
-<a name="http_basic_test"></a>
+<a id="http_basic_test"></a>
 ### http_basic_test
 - **Type**: HTTP basic authentication
 

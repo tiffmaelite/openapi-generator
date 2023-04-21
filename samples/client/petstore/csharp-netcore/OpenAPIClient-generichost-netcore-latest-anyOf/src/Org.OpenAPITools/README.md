@@ -1,6 +1,6 @@
 # Created with Openapi Generator
 
-<a name="cli"></a>
+<a id="cli"></a>
 ## Run the following powershell command to generate the library
 
 ```ps1
@@ -41,7 +41,7 @@ java -jar "<path>/openapi-generator/modules/openapi-generator-cli/target/openapi
     # -t templates
 ```
 
-<a name="usage"></a>
+<a id="usage"></a>
 ## Using the library in your project
 
 ```cs
@@ -82,7 +82,7 @@ namespace YourProject
     }
 }
 ```
-<a name="questions"></a>
+<a id="questions"></a>
 ## Questions
 
 - What about HttpRequest failures and retries?
@@ -98,7 +98,7 @@ namespace YourProject
   Use the provided On and After methods in the Api class from the namespace Org.OpenAPITools.Rest.DefaultApi.
   Or provide your own class by using the generic ConfigureApi method.
 
-<a name="dependencies"></a>
+<a id="dependencies"></a>
 ## Dependencies
 
 - [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting/) - 5.0.0 or later
@@ -108,7 +108,7 @@ namespace YourProject
 - [CompareNETObjects](https://www.nuget.org/packages/CompareNETObjects) - 4.61.0 or later
 - [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 4.7.0 or later
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 Endpoints do not require authorization.

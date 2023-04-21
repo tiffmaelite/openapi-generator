@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**call123testSpecialTags**](AnotherFakeApi.md#call123testSpecialTags) | **PATCH** /another-fake/dummy | To test special tags
 
 
-<a name="call123testSpecialTags"></a>
+<a id="call123testSpecialTags"></a>
 # **call123testSpecialTags**
 > Client call123testSpecialTags(client)
 

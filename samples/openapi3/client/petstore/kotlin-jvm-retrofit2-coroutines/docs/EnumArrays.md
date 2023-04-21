@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 **arrayEnum** | [**inline**](#kotlin.collections.List&lt;ArrayEnumEnum&gt;) |  |  [optional]
 
 
-<a name="JustSymbolEnum"></a>
+<a id="JustSymbolEnum"></a>
 ## Enum: just_symbol
 Name | Value
 ---- | -----
 justSymbol | &gt;&#x3D;, $
 
 
-<a name="kotlin.collections.List<ArrayEnumEnum>"></a>
+<a id="kotlin.collections.List<ArrayEnumEnum>"></a>
 ## Enum: array_enum
 Name | Value
 ---- | -----

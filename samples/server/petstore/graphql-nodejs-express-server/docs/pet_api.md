@@ -14,48 +14,48 @@ Method | HTTP request | Description
 [**UploadFile**](pet_api.md#UploadFile) | **POST** /pet/{petId}/uploadImage | uploads an image
 
 
-<a name="AddPet"></a>
+<a id="AddPet"></a>
 # **AddPet**
 > AddPet(body)
 
 Add a new pet to the store
-<a name="DeletePet"></a>
+<a id="DeletePet"></a>
 # **DeletePet**
 > DeletePet(petId, apiKey)
 
 Deletes a pet
-<a name="FindPetsByStatus"></a>
+<a id="FindPetsByStatus"></a>
 # **FindPetsByStatus**
 > Pet FindPetsByStatus(status)
 
 Finds Pets by status
 
 Multiple status values can be provided with comma separated strings
-<a name="FindPetsByTags"></a>
+<a id="FindPetsByTags"></a>
 # **FindPetsByTags**
 > Pet FindPetsByTags(tags)
 
 Finds Pets by tags
 
 Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
-<a name="GetPetById"></a>
+<a id="GetPetById"></a>
 # **GetPetById**
 > Pet GetPetById(petId)
 
 Find pet by ID
 
 Returns a single pet
-<a name="UpdatePet"></a>
+<a id="UpdatePet"></a>
 # **UpdatePet**
 > UpdatePet(body)
 
 Update an existing pet
-<a name="UpdatePetWithForm"></a>
+<a id="UpdatePetWithForm"></a>
 # **UpdatePetWithForm**
 > UpdatePetWithForm(petId, name, status)
 
 Updates a pet in the store with form data
-<a name="UploadFile"></a>
+<a id="UploadFile"></a>
 # **UploadFile**
 > ApiResponse UploadFile(petId, additionalMetadata, file)
 

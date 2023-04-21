@@ -14,28 +14,28 @@ Name | Type | Description | Notes
 **outerEnumIntegerDefaultValue** | [**OuterEnumIntegerDefaultValue**](OuterEnumIntegerDefaultValue.md) |  |  [optional]
 
 
-<a name="EnumStringRequiredEnum"></a>
+<a id="EnumStringRequiredEnum"></a>
 ## Enum: enum_string_required
 Name | Value
 ---- | -----
 enumStringRequired | UPPER, lower, 
 
 
-<a name="EnumStringEnum"></a>
+<a id="EnumStringEnum"></a>
 ## Enum: enum_string
 Name | Value
 ---- | -----
 enumString | UPPER, lower, 
 
 
-<a name="EnumIntegerEnum"></a>
+<a id="EnumIntegerEnum"></a>
 ## Enum: enum_integer
 Name | Value
 ---- | -----
 enumInteger | 1, -1
 
 
-<a name="EnumNumberEnum"></a>
+<a id="EnumNumberEnum"></a>
 ## Enum: enum_number
 Name | Value
 ---- | -----

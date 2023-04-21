@@ -127,7 +127,7 @@ Class | Method | HTTP request | Description
  - [SomeObj](docs/SomeObj.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 Endpoints do not require authorization.

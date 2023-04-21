@@ -1,6 +1,6 @@
 # Documentation for Example
 
-<a name="documentation-for-api-endpoints"></a>
+<a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
 All URIs are relative to *http://localhost:8080*
@@ -9,7 +9,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 
 
-<a name="documentation-for-models"></a>
+<a id="documentation-for-models"></a>
 ## Documentation for Models
 
  - [Object](./Models/Object.md)
@@ -18,7 +18,7 @@ Class | Method | HTTP request | Description
  - [String](./Models/String.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
 Endpoints do not require authorization.
