@@ -109,9 +109,11 @@ namespace YourProject
 - [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 4.7.0 or later
 
 <a name="documentation-for-authorization"></a>
-## Documentation for Authorization
+## Documentation For Authorization
 
-All endpoints do not require authorization.
+Endpoints do not require authorization.
+
+
 
 ## Build
 - SDK version: 1.0.0

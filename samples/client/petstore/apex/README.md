@@ -97,9 +97,12 @@ Class | Method | HTTP request | Description
  - [OASUser](OASUser.md)
 
 
-## Documentation for Authorization
+<a name="documentation-for-authorization"></a>
+## Documentation For Authorization
+
 
 Authentication schemes defined for the API:
+<a name="petstore_auth"></a>
 ### petstore_auth
 
 - **Type**: OAuth
@@ -109,6 +112,7 @@ Authentication schemes defined for the API:
   - write:pets: modify pets in your account
   - read:pets: read your pets
 
+<a name="api_key"></a>
 ### api_key
 
 

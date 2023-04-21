@@ -98,9 +98,12 @@ Class | Method | HTTP request | Description
  - [User](User.md)
 
 
-## Documentation for Authorization
+<a name="documentation-for-authorization"></a>
+## Documentation For Authorization
+
 
 Authentication schemes defined for the API:
+<a name="api_key"></a>
 ### api_key
 
 - **Type**: API key

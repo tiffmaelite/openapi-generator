@@ -151,10 +151,10 @@ namespace YourProject
 - [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 4.7.0 or later
 
 <a name="documentation-for-authorization"></a>
-## Documentation for Authorization
+## Documentation For Authorization
+
 
 Authentication schemes defined for the API:
-
 <a name="petstore_auth"></a>
 ### petstore_auth
 
@@ -164,35 +164,25 @@ Authentication schemes defined for the API:
 - **Authorization URL**: http://petstore.swagger.io/api/oauth/dialog
 - **Scopes**:   
 - write:pets: modify pets in your account  
-- read:pets: read your pets
-
-<a name="api_key"></a>
+- read:pets: read your pets<a name="api_key"></a>
 ### api_key
 
 - **Type**: API key
 - **API key parameter name**: api_key
-- **Location**: HTTP header
-
-<a name="api_key_query"></a>
+- **Location**: HTTP header<a name="api_key_query"></a>
 ### api_key_query
 
 - **Type**: API key
 - **API key parameter name**: api_key_query
-- **Location**: URL query string
-
-<a name="http_basic_test"></a>
+- **Location**: URL query string<a name="http_basic_test"></a>
 ### http_basic_test
 
 
-- **Type**: HTTP basic authentication
-
-<a name="bearer_test"></a>
+- **Type**: HTTP basic authentication<a name="bearer_test"></a>
 ### bearer_test
 
 
-- **Type**: Bearer Authentication
-
-<a name="http_signature_test"></a>
+- **Type**: Bearer Authentication<a name="http_signature_test"></a>
 ### http_signature_test
 
 

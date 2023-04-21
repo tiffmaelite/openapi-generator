@@ -132,10 +132,11 @@ Class | Method | HTTP request | Description
 {{^modelPackage}}No model defined in this package{{/modelPackage}}{{/modelDocs}}
 
 <a name="documentation-for-authorization"></a>
-## Documentation for Authorization
+## Documentation For Authorization
 
-{{^authMethods}}All endpoints do not require authorization.{{/authMethods}}{{#authMethods}}{{#-last}}Authentication schemes defined for the API:{{/-last}}{{/authMethods}}{{#authMethods}}
-
+{{^authMethods}}Endpoints do not require authorization.{{/authMethods}}
+{{#hasAuthMethods}}Authentication schemes defined for the API:{{/hasAuthMethods}}
+{{#authMethods}}
 <a name="{{name}}"></a>
 ### {{name}}
 

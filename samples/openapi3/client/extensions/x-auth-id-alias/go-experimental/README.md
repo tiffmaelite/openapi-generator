@@ -87,10 +87,12 @@ Class | Method | HTTP request | Description
 
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
 
-
+Authentication schemes defined for the API:
+<a name="api_key"></a>
 ### api_key
 
 - **Type**: API key
@@ -99,7 +101,7 @@ Class | Method | HTTP request | Description
 
 Note, each API key must be added to a map of `map[string]APIKey` where the key is: X-Api-Key and passed in as the auth context for each request.
 
-
+<a name="api_key_query"></a>
 ### api_key_query
 
 - **Type**: API key

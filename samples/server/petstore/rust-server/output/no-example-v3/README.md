@@ -102,8 +102,9 @@ Method | HTTP request | Description
  - [OpGetRequest](docs/OpGetRequest.md)
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation For Authorization
- Endpoints do not require authorization.
+Endpoints do not require authorization.
 
 
 ## Author

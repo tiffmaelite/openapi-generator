@@ -131,17 +131,22 @@ Class | Method | HTTP request | Description
  - [Zebra](docs/Zebra.md)
 
 
-## Documentation for Authorization
+<a name="documentation-for-authorization"></a>
+## Documentation For Authorization
 
 
+Authentication schemes defined for the API:
+<a name="http_auth"></a>
 ### http_auth
 
 - **Type**: HTTP basic authentication
 
+<a name="BearerToken"></a>
 ### BearerToken
 
 - **Type**: Bearer authentication
 
+<a name="petstore_auth"></a>
 ### petstore_auth
 
 - **Type**: OAuth
@@ -151,6 +156,7 @@ Class | Method | HTTP request | Description
   - `write:pets`: modify pets in your account
   - `read:pets`: read your pets
 
+<a name="api_key"></a>
 ### api_key
 
 - **Type**: API key

@@ -200,9 +200,12 @@ Method | HTTP request | Description
  - [User](docs/User.md)
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
-## petstore_auth
+Authentication schemes defined for the API:
+<a name="petstore_auth"></a>
+### petstore_auth
 - **Type**: OAuth
 - **Flow**: implicit
 - **Authorization URL**: http://petstore.swagger.io/api/oauth/dialog
@@ -217,19 +220,22 @@ Example
 Or via OAuth2 module to automatically refresh tokens and perform user authentication.
 ```
 ```
-## api_key
+<a name="api_key"></a>
+### api_key
 - **Type**: API key
 
 Example
 ```
 ```
-## api_key_query
+<a name="api_key_query"></a>
+### api_key_query
 - **Type**: API key
 
 Example
 ```
 ```
-## http_basic_test
+<a name="http_basic_test"></a>
+### http_basic_test
 - **Type**: HTTP basic authentication
 
 Example

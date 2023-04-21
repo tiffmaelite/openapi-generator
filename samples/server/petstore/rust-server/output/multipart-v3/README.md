@@ -109,8 +109,9 @@ Method | HTTP request | Description
  - [MultipleIdenticalMimeTypesPostRequest](docs/MultipleIdenticalMimeTypesPostRequest.md)
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation For Authorization
- Endpoints do not require authorization.
+Endpoints do not require authorization.
 
 
 ## Author

@@ -102,9 +102,12 @@ Method | HTTP request | Description
 
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
-## bearerAuth
+Authentication schemes defined for the API:
+<a name="bearerAuth"></a>
+### bearerAuth
 - **Type**: Bearer token authentication
 
 Example

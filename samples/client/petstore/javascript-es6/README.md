@@ -220,10 +220,12 @@ Class | Method | HTTP request | Description
  - [OpenApiPetstore.User](docs/User.md)
 
 
-## Documentation for Authorization
+<a name="documentation-for-authorization"></a>
+## Documentation For Authorization
 
 
-
+Authentication schemes defined for the API:
+<a name="petstore_auth"></a>
 ### petstore_auth
 
 
@@ -234,8 +236,7 @@ Class | Method | HTTP request | Description
   - write:pets: modify pets in your account
   - read:pets: read your pets
 
-
-
+<a name="api_key"></a>
 ### api_key
 
 
@@ -243,8 +244,7 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: api_key
 - **Location**: HTTP header
 
-
-
+<a name="api_key_query"></a>
 ### api_key_query
 
 
@@ -252,20 +252,17 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: api_key_query
 - **Location**: URL query string
 
-
-
+<a name="http_basic_test"></a>
 ### http_basic_test
 
 - **Type**: HTTP basic authentication
 
-
-
+<a name="bearer_test"></a>
 ### bearer_test
 
 - **Type**: Bearer authentication (JWT)
 
-
-
+<a name="http_signature_test"></a>
 ### http_signature_test
 
 
